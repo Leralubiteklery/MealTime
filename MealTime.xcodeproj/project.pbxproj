@@ -13,6 +13,7 @@
 		EDF465822AA9F953004DFBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF465812AA9F953004DFBA7 /* Assets.xcassets */; };
 		EDF465852AA9F953004DFBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF465832AA9F953004DFBA7 /* LaunchScreen.storyboard */; };
 		EDF4658D2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */; };
+		EDF465B22AAA1664004DFBA7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EDF465842AA9F953004DFBA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF465862AA9F953004DFBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				EDF465782AA9F951004DFBA7 /* AppDelegate.swift */,
 				EDF4657A2AA9F951004DFBA7 /* SceneDelegate.swift */,
+				EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */,
 				EDF4657E2AA9F951004DFBA7 /* Main.storyboard */,
 				EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */,
 				EDF465812AA9F953004DFBA7 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				EDF465792AA9F951004DFBA7 /* AppDelegate.swift in Sources */,
 				EDF4658D2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift in Sources */,
 				EDF4657B2AA9F951004DFBA7 /* SceneDelegate.swift in Sources */,
+				EDF465B22AAA1664004DFBA7 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
