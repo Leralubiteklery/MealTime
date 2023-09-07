@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class MealsViewControllerTableViewController: UITableViewController {
 
     private var mealTimes: [Date] = []
+    var context: NSManagedObjectContext!
     
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
