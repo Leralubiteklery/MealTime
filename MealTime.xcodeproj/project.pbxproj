@@ -14,6 +14,11 @@
 		EDF465852AA9F953004DFBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF465832AA9F953004DFBA7 /* LaunchScreen.storyboard */; };
 		EDF4658D2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */; };
 		EDF465B22AAA1664004DFBA7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */; };
+		EDF465B52AAA18A9004DFBA7 /* MealTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B32AAA18A9004DFBA7 /* MealTime.xcdatamodeld */; };
+		EDF465BA2AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B62AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift */; };
+		EDF465BB2AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B72AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift */; };
+		EDF465BC2AAA1A1C004DFBA7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B82AAA1A1C004DFBA7 /* User+CoreDataClass.swift */; };
+		EDF465BD2AAA1A1C004DFBA7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF465B92AAA1A1C004DFBA7 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		EDF465862AA9F953004DFBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EDF465B42AAA18A9004DFBA7 /* MealTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealTime.xcdatamodel; sourceTree = "<group>"; };
+		EDF465B62AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EDF465B72AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDF465B82AAA1A1C004DFBA7 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EDF465B92AAA1A1C004DFBA7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,10 @@
 		EDF4656C2AA9F950004DFBA7 = {
 			isa = PBXGroup;
 			children = (
+				EDF465B62AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift */,
+				EDF465B72AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift */,
+				EDF465B82AAA1A1C004DFBA7 /* User+CoreDataClass.swift */,
+				EDF465B92AAA1A1C004DFBA7 /* User+CoreDataProperties.swift */,
 				EDF465772AA9F951004DFBA7 /* MealTime */,
 				EDF465762AA9F951004DFBA7 /* Products */,
 			);
@@ -60,6 +74,7 @@
 			children = (
 				EDF465782AA9F951004DFBA7 /* AppDelegate.swift */,
 				EDF4657A2AA9F951004DFBA7 /* SceneDelegate.swift */,
+				EDF465B32AAA18A9004DFBA7 /* MealTime.xcdatamodeld */,
 				EDF465B12AAA1664004DFBA7 /* CoreDataStack.swift */,
 				EDF4657E2AA9F951004DFBA7 /* Main.storyboard */,
 				EDF4658C2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift */,
@@ -141,10 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF465BA2AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift in Sources */,
+				EDF465BB2AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift in Sources */,
 				EDF465792AA9F951004DFBA7 /* AppDelegate.swift in Sources */,
 				EDF4658D2AA9FAA6004DFBA7 /* MealsViewControllerTableViewController.swift in Sources */,
 				EDF4657B2AA9F951004DFBA7 /* SceneDelegate.swift in Sources */,
 				EDF465B22AAA1664004DFBA7 /* CoreDataStack.swift in Sources */,
+				EDF465BC2AAA1A1C004DFBA7 /* User+CoreDataClass.swift in Sources */,
+				EDF465B52AAA18A9004DFBA7 /* MealTime.xcdatamodeld in Sources */,
+				EDF465BD2AAA1A1C004DFBA7 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +382,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDF465B32AAA18A9004DFBA7 /* MealTime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDF465B42AAA18A9004DFBA7 /* MealTime.xcdatamodel */,
+			);
+			currentVersion = EDF465B42AAA18A9004DFBA7 /* MealTime.xcdatamodel */;
+			path = MealTime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EDF4656D2AA9F950004DFBA7 /* Project object */;
 }
