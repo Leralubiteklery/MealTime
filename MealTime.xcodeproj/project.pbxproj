@@ -52,10 +52,7 @@
 		EDF4656C2AA9F950004DFBA7 = {
 			isa = PBXGroup;
 			children = (
-				EDF465B62AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift */,
-				EDF465B72AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift */,
-				EDF465B82AAA1A1C004DFBA7 /* User+CoreDataClass.swift */,
-				EDF465B92AAA1A1C004DFBA7 /* User+CoreDataProperties.swift */,
+				EDF465BE2AAA1AC8004DFBA7 /* CoreData Entitites */,
 				EDF465772AA9F951004DFBA7 /* MealTime */,
 				EDF465762AA9F951004DFBA7 /* Products */,
 			);
@@ -83,6 +80,17 @@
 				EDF465862AA9F953004DFBA7 /* Info.plist */,
 			);
 			path = MealTime;
+			sourceTree = "<group>";
+		};
+		EDF465BE2AAA1AC8004DFBA7 /* CoreData Entitites */ = {
+			isa = PBXGroup;
+			children = (
+				EDF465B62AAA1A1C004DFBA7 /* Meal+CoreDataClass.swift */,
+				EDF465B72AAA1A1C004DFBA7 /* Meal+CoreDataProperties.swift */,
+				EDF465B82AAA1A1C004DFBA7 /* User+CoreDataClass.swift */,
+				EDF465B92AAA1A1C004DFBA7 /* User+CoreDataProperties.swift */,
+			);
+			path = "CoreData Entitites";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
