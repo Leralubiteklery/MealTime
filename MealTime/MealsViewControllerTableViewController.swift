@@ -23,6 +23,23 @@ class MealsViewControllerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userName = "Max"
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", userName)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if results.isEmpty {
+                user = User(context: context)
+                user.name = userName
+                try context.save()
+            } else {
+                user = results.first
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
 
     }
 
