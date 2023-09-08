@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class MealsViewControllerTableViewController: UITableViewController {
-
+    
     var context: NSManagedObjectContext!
     var user: User!
     
@@ -39,9 +39,8 @@ class MealsViewControllerTableViewController: UITableViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
-
     }
-
+    
     @IBAction func addMealButtonPressed(_ sender: Any) {
         let meal = Meal(context: context)
         meal.date = Date()
@@ -59,37 +58,37 @@ class MealsViewControllerTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "My happy meal time"
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         user.meals?.count ?? 0
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         guard let meal = user.meals?[indexPath.row] as? Meal,
               let mealDate = meal.date
         else { return cell}
-
+        
         cell.textLabel?.text = dateFormatter.string(from: mealDate)
-
+        
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         guard let meal = user.meals?[indexPath.row] as? Meal, editingStyle == .delete else { return }
-       
-            context.delete(meal)
-
-            do {
-                try context.save()
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
+        
+        context.delete(meal)
+        
+        do {
+            try context.save()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
+    }
 }
