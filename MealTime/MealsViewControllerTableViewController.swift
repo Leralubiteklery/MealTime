@@ -10,7 +10,6 @@ import CoreData
 
 class MealsViewControllerTableViewController: UITableViewController {
 
-    private var mealTimes: [Date] = []
     var context: NSManagedObjectContext!
     var user: User!
     
@@ -65,14 +64,17 @@ class MealsViewControllerTableViewController: UITableViewController {
         "My happy meal time"
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        mealTimes.count
+        user.meals?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let mealTime = mealTimes[indexPath.row]
-        cell.textLabel?.text = dateFormatter.string(from: mealTime)
+        guard let meal = user.meals?[indexPath.row] as? Meal,
+              let mealDate = meal.date
+        else { return cell}
+
+        cell.textLabel?.text = dateFormatter.string(from: mealDate)
 
         return cell
     }
