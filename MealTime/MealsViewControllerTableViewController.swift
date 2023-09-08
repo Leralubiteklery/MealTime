@@ -12,6 +12,7 @@ class MealsViewControllerTableViewController: UITableViewController {
 
     private var mealTimes: [Date] = []
     var context: NSManagedObjectContext!
+    var user: User!
     
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -26,9 +27,19 @@ class MealsViewControllerTableViewController: UITableViewController {
     }
 
     @IBAction func addMealButtonPressed(_ sender: Any) {
-        let date = Date()
-        mealTimes.append(date)
-        tableView.reloadData()
+        let meal = Meal(context: context)
+        meal.date = Date()
+        
+        let meals = user.meals?.mutableCopy() as? NSMutableOrderedSet
+        meals?.add(meal)
+        user.meals = meals
+        
+        do {
+            try context.save()
+            tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Table view data source
